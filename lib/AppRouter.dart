@@ -23,16 +23,20 @@ class AppRouter {
             child: ContainerView(), type: PageTransitionType.scale);
 
         return PageTransition(
-            child: ContainerSecondView(), type: PageTransitionType.fade);
+            child: ContainerSecondView(),
+            type: PageTransitionType.rightToLeftWithFade);
       case AppRouter.EXPLORE_CONTAINER_TWO:
         return PageTransition(
-            child: ContainerSecondView(), type: PageTransitionType.fade);
+            child: ContainerSecondView(),
+            type: PageTransitionType.rightToLeftWithFade);
       case AppRouter.EXPLORE_CONTAINER_THIRD:
         return PageTransition(
-            child: ContainerThirdView(), type: PageTransitionType.fade);
+            child: ContainerThirdView(),
+            type: PageTransitionType.rightToLeftWithFade);
       case AppRouter.EXPLORE_HOME:
         return PageTransition(
-            child: ContainerView(), type: PageTransitionType.rightToLeft);
+            child: ContainerView(),
+            type: PageTransitionType.leftToRightWithFade);
     }
 
     return null;
